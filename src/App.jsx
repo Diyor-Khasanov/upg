@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ProductSlider from "./components/ProductSlider/ProductSlider";
 import ProductsPage from "./components/ProductsPage/ProductSlider";
 import Section from "./components/Section/Section";
+import Category from "./components/Category/Category";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <ProductSlider />
       <ProductsPage />
       <Section />
+      <Category />
     </div>
   );
 };
