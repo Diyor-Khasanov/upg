@@ -5,20 +5,20 @@ import ProductCard from "./ProductCard";
 const products = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
   name: `Product ${i + 1}`,
-  description: `This is a description for product ${i + 1}.`,
+  description: `Description for product ${i + 1}`,
   price: `$${(i + 1) * 10}`,
-  images: ["", "", "", ""], // placeholder images
+  images: ["", "", "", ""], // placeholder img
 }));
 
 const ProductSlider = () => {
   const [current, setCurrent] = useState(0);
 
-  const next = () => {
-    setCurrent((prev) => (prev + 1) % products.length);
+  const prev = () => {
+    setCurrent((prev) => (prev === 0 ? products.length - 1 : prev - 1));
   };
 
-  const prev = () => {
-    setCurrent((prev) => (prev - 1 + products.length) % products.length);
+  const next = () => {
+    setCurrent((prev) => (prev === products.length - 1 ? 0 : prev + 1));
   };
 
   return (

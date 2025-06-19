@@ -1,52 +1,78 @@
 .product-card {
   min-width: 100%;
-  padding: 24px;
+  padding: 20px;
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
+  text-align: center;
 
   .image-slider {
-    height: 240px;
-    background: #eee;
-    border-radius: 10px;
-    margin-bottom: 16px;
     position: relative;
     overflow: hidden;
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: #eee;
 
-    img {
-      width: 100%;
+    .img-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
       height: 100%;
-      object-fit: cover;
+      width: 400%;
     }
 
-    .placeholder {
-      height: 100%;
+    .img-box {
+      width: 100%;
+      flex: 0 0 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
-      color: #888;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .placeholder {
+        color: #999;
+        font-size: 18px;
+      }
+    }
+
+    .img-controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 6px;
+
+      button {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 4px 8px;
+        font-size: 16px;
+        cursor: pointer;
+      }
     }
 
     .img-pagination {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
+      justify-content: center;
       gap: 6px;
+      margin-top: 8px;
 
       .dot {
         width: 8px;
         height: 8px;
-        background: #ccc;
         border-radius: 50%;
-        cursor: pointer;
+        background: #ccc;
 
         &.active {
-          background-color: #ec1b30;
+          background: #ec1b30;
         }
       }
     }
@@ -54,17 +80,17 @@
 
   h3 {
     font-size: 20px;
-    margin-bottom: 8px;
+    margin: 10px 0 4px;
   }
 
   p {
-    font-size: 15px;
-    color: #666;
-    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
   }
 
   strong {
+    color: #222;
     font-size: 18px;
-    color: #111;
   }
 }
