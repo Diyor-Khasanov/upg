@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import ProductSlider from "./components/ProductSlider/ProductSlider";
 import ProductsPage from "./components/ProductsPage/ProductSlider";
+import Section from "./components/Section/Section";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <ProductSlider />
       <ProductsPage />
+      <Section />
     </div>
   );
 };
