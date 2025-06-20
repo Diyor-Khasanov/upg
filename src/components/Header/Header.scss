@@ -11,6 +11,12 @@ body.light {
 
   .header {
     background-color: #fff;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 110px;
+    width: 100%;
   }
 
   .search-box input {
@@ -21,6 +27,7 @@ body.light {
   .nav-links a,
   .nav-links button {
     color: #000;
+    margin-right: 30px;
   }
 }
 
@@ -41,18 +48,23 @@ body.dark {
   .nav-links a,
   .nav-links button {
     color: #fff;
+    margin-right: 30px;
   }
 }
 
 .header {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 24px;
-  position: relative;
   z-index: 999;
   flex-wrap: wrap;
-  // position: fixed;
+  gap: 110px;
+  width: 100%;
+  @media screen and (max-width: 900px){
+    height: 20px;
+  }
 
   .logo img {
     width: 110px;
@@ -69,7 +81,7 @@ body.dark {
       border-radius: 5px;
       font-size: 14px;
       transition: all 0.3s ease;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 900px) {
         display: none;
       }
     }
