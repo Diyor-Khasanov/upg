@@ -24,15 +24,15 @@
 
   .nav {
     position: absolute;
-    top: 50%;
+    top: 48%;
     transform: translateY(-50%);
-    background-color: #ec1b30;
+    background-color: #e448a3;
     border: none;
     color: #fff;
     font-size: 36px;
     padding: 5px 18px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 15px;
     z-index: 10;
 
     &.prev {
@@ -44,7 +44,7 @@
     }
 
     &:hover {
-      background-color: #c11228;
+      background-color: #e448a3;
     }
   }
 
@@ -63,7 +63,7 @@
       transition: background-color 0.3s;
 
       &.active {
-        background-color: #ec1b30;
+        background-color: #e448a3;
       }
 
       &:hover {
