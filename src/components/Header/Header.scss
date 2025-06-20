@@ -17,6 +17,12 @@ body.light {
     justify-content: space-between;
     gap: 110px;
     width: 100%;
+    @media screen and (max-width: 1024px){
+      height: 100px;
+    }
+    @media screen and (max-width: 1356px) {
+      height: 100px;
+    }
   }
 
   .search-box input {
@@ -65,6 +71,12 @@ body.dark {
   @media screen and (max-width: 900px){
     height: 20px;
   }
+  @media screen and (max-width: 1024px){
+    height: 100px;
+  }
+  @media screen and (max-width: 1356px) {
+    height: 100px;
+  }
 
   .logo img {
     width: 110px;
@@ -94,6 +106,12 @@ body.dark {
     @media screen and (max-width: 900px) {
       display: none;
     }
+    @media screen and (max-width: 1024px) {
+      margin-top: -150px;
+    }
+    @media screen and (max-width: 1356px) {
+      margin-top: -150px;
+    }
     &.open {
       display: block;
       position: absolute;
@@ -116,6 +134,9 @@ body.dark {
       -webkit-backdrop-filter: blur(5px);
       border: 1px solid rgba(255, 255, 255, 0.3);
       position: fixed;
+      @media screen and (max-width: 1024px){
+        padding-top: 150px;
+      }
     }
 
     a,
