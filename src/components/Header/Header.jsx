@@ -1,25 +1,80 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.scss";
+import logo from "./assets/logo.png";
+import logo1 from "./assets/logo1.png";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import AlignVerticalCenterIcon from "@mui/icons-material/AlignVerticalCenter";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SmsIcon from "@mui/icons-material/Sms";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark" : "light";
+  }, [darkMode]);
+
+  const handleSearchKey = (e) => {
+    if (e.key === "Enter") {
+      console.log("Search:", searchTerm);
+      // You can redirect or call search API here
+    }
+  };
 
   return (
     <header className="header">
-      <div className="logo">MyLogo</div>
+      <div className="header-left">
+        <div className="logo">
+          {darkMode ? <img src={logo1} /> : <img src={logo} />}
+        </div>
+      </div>
 
       <div className="search-box">
-        <input type="text" placeholder="Search..." />
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onKeyDown={handleSearchKey}
+        />
       </div>
 
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-        <a href="#">Login</a>
+        <a href="#">
+          <AccountBalanceWalletIcon />
+          UZS/USD
+        </a>
+        <a href="#">
+          <AlignVerticalCenterIcon />
+          Compare
+        </a>
+        <a href="#">
+          <FavoriteIcon />
+          Favorite
+        </a>
+        <a href="#">
+          <ShoppingCartIcon />
+          Cart
+        </a>
+        <a href="#">
+          <SmsIcon />
+          Contact
+        </a>
+        <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
+          {darkMode ? " Light" : " Dark"}
+        </button>
+        <a href="#">
+          <AccountCircleIcon />
+          Profile
+        </a>
       </nav>
 
       <div
