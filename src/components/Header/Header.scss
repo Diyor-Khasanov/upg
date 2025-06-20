@@ -68,7 +68,7 @@ body.dark {
       border-radius: 5px;
       font-size: 14px;
       transition: all 0.3s ease;
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 600px) {
         display: none;
       }
     }
@@ -84,12 +84,24 @@ body.dark {
     &.open {
       display: block;
       position: absolute;
-      top: 100px;
+      top: 0px;
       right: 0;
-      height: 60vh;
+      height: 100vh;
       // background: #000;
       width: 200px;
       z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     a,
@@ -119,6 +131,7 @@ body.dark {
     cursor: pointer;
     @media screen and (max-width: 900px) {
       display: flex;
+      z-index: 11;
     }
 
     span {
