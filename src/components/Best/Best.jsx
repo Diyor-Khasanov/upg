@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./ProductSlider.scss";
+import "./Best.scss";
 
-const ProductSlider = () => {
+const Best = () => {
   const [cart, setCart] = useState([]);
 
   const computerEquipment = [
@@ -84,7 +84,7 @@ const ProductSlider = () => {
 
   return (
     <div>
-      <h1 className="tit">News</h1>
+      <h1 className="tit">The Best Sellers</h1>
       <div className="wrapper">
         {computerEquipment.map((e, index) => (
           <div className="card" key={index}>
@@ -103,4 +103,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;
+export default Best;
