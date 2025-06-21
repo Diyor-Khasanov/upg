@@ -9,6 +9,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import HelpSection from "./components/HelpSection/HelpSection";
 import Footer from "./components/Footer/Footer";
 import Best from "./components/Best/Best";
+import Review from "./components/Review/Review";
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
       <Category />
       <AboutUs />
       <HelpSection />
+      <Review />
       <Footer />
     </div>
   );
