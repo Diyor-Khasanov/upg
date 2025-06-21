@@ -17,7 +17,7 @@ body.light {
     justify-content: space-between;
     gap: 110px;
     width: 100%;
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1024px) {
       height: 100px;
     }
     @media screen and (max-width: 1356px) {
@@ -68,10 +68,10 @@ body.dark {
   flex-wrap: wrap;
   gap: 110px;
   width: 100%;
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 900px) {
     height: 30px !important;
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     height: 100px;
   }
   @media screen and (max-width: 1356px) {
@@ -134,7 +134,7 @@ body.dark {
       -webkit-backdrop-filter: blur(5px);
       border: 1px solid rgba(255, 255, 255, 0.3);
       position: fixed;
-      @media screen and (max-width: 1024px){
+      @media screen and (max-width: 1024px) {
         padding-top: 150px;
       }
     }
@@ -192,3 +192,4 @@ body.dark {
     }
   }
 }
+

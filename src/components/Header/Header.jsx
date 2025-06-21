@@ -10,7 +10,8 @@ import SmsIcon from "@mui/icons-material/Sms";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import MenuIcon from '@mui/icons-material/Menu';
+import SmartSearch from "../SmartSearch/SmartSearch";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,13 +38,7 @@ const Header = () => {
       </div>
 
       <div className="search-box">
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          onKeyDown={handleSearchKey}
-        />
+        <SmartSearch />
       </div>
 
       <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
