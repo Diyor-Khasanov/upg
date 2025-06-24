@@ -20,8 +20,9 @@ body.light {
     @media screen and (max-width: 1024px) {
       height: 100px;
     }
-    @media screen and (max-width: 1356px) {
-      height: 100px;
+    @media screen and (max-width: 1440px) {
+      height: 50px;
+      gap: 30px;
     }
   }
 
@@ -72,10 +73,15 @@ body.dark {
     height: 30px !important;
   }
   @media screen and (max-width: 1024px) {
-    height: 100px;
+    height: 120px;
+    margin-bottom: 50px;
   }
   @media screen and (max-width: 1356px) {
     height: 100px;
+  }
+  @media screen and (max-width: 1440px) {
+    height: 50px;
+    gap: 30px;
   }
 
   .logo img {
@@ -107,10 +113,9 @@ body.dark {
       display: none;
     }
     @media screen and (max-width: 1024px) {
-      margin-top: -150px;
+      display: none;
     }
-    @media screen and (max-width: 1356px) {
-      margin-top: -150px;
+    @media screen and (max-width: 1440px) {
     }
     &.open {
       display: block;
@@ -164,7 +169,7 @@ body.dark {
     flex-direction: column;
     gap: 4px;
     cursor: pointer;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1024px) {
       position: fixed;
       right: 5px;
       display: flex;

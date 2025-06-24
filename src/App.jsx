@@ -8,6 +8,7 @@ import Profile from "./pages/Profile/Profile";
 import Compare from "./pages/Compare/Compare";
 import Favorites from "./pages/Favorites/Favorites";
 import Cart from './pages/Cart/Cart'
+import Contact from './pages/Contact/Contact'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/compare" element={<Compare />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/contact" element={<Contact />} />
         
       </Routes>
       <Footer />

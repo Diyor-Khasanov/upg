@@ -67,8 +67,10 @@ const Header = () => {
           </Link>
         </a>
         <a href="#">
-          <SmsIcon />
-          Contact
+          <Link to="/contact">
+            <SmsIcon />
+            Contact
+          </Link>
         </a>
         <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
