@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
 import "./Header.scss";
 import logo from "./assets/logo.png";
 import logo1 from "./assets/logo1.png";
@@ -11,7 +12,6 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SmartSearch from "../SmartSearch/SmartSearch";
-
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,8 +67,10 @@ const Header = () => {
           {darkMode ? " Light" : " Dark"}
         </button>
         <a href="#">
-          <AccountCircleIcon />
-          Profile
+          <Link to="/profile">
+            <AccountCircleIcon />
+            Profile
+          </Link>
         </a>
       </nav>
 
