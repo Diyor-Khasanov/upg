@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductSlider.scss";
 
-const ProductsPage = ({ addToCart }) => {
+const ProductPage = ({ addToCart }) => {
   const computerEquipment = [
     {
       img: "https://www.lg.com/content/dam/channel/wcms/kz/sac-id-it-rac/it-mnt-monitors/27gs75q/feature-cards/ultragear-27gs75q-06-3-gamer-centric-design-m.jpg",
@@ -77,7 +77,7 @@ const ProductsPage = ({ addToCart }) => {
 
   return (
     <div>
-      <h1 className="tit">The Best Sellers</h1>
+      <h1 className="tit">Products</h1>
       <div className="wrapper">
         {computerEquipment.map((e, index) => (
           <div className="card" key={index}>
@@ -96,4 +96,4 @@ const ProductsPage = ({ addToCart }) => {
   );
 };
 
-export default ProductsPage;
+export default ProductPage;
