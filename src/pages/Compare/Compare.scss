@@ -1,0 +1,50 @@
+.compare-markets-container {
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .product-compare {
+    border: 1px solid #e448a3;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: auto;
+      object-fit: contain;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+
+      th,
+      td {
+        border: 1px solid #e448a3;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .product-compare {
+    img {
+      max-width: 100%;
+    }
+  }
+}

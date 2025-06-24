@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import logo from "./assets/logo.png";
 import logo1 from "./assets/logo1.png";
@@ -33,7 +33,9 @@ const Header = () => {
     <header className="header">
       <div className="header-left">
         <div className="logo">
-          {darkMode ? <img src={logo1} /> : <img src={logo} />}
+          <Link to="/">
+            {darkMode ? <img src={logo1} /> : <img src={logo} />}
+          </Link>
         </div>
       </div>
 
@@ -47,8 +49,10 @@ const Header = () => {
           UZS/USD
         </a>
         <a href="#">
-          <AlignVerticalCenterIcon />
-          Compare
+          <Link to='/compare'>
+            <AlignVerticalCenterIcon />
+            Compare
+          </Link>
         </a>
         <a href="#">
           <FavoriteIcon />

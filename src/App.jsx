@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Profile from "./pages/Profile/Profile";
+import Compare from "./pages/Compare/Compare";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/compare" element={<Compare />} />
         
       </Routes>
       <Footer />
