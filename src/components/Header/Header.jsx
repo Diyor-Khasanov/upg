@@ -61,8 +61,10 @@ const Header = () => {
           </Link>
         </a>
         <a href="#">
-          <ShoppingCartIcon />
-          Cart
+          <Link to="/cart">
+            <ShoppingCartIcon />
+            Cart
+          </Link>
         </a>
         <a href="#">
           <SmsIcon />

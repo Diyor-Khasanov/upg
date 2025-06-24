@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ProductSlider.scss";
 
-const ProductSlider = () => {
-  const [cart, setCart] = useState([]);
-
+const ProductsPage = ({ addToCart }) => {
   const computerEquipment = [
     {
       img: "https://www.lg.com/content/dam/channel/wcms/kz/sac-id-it-rac/it-mnt-monitors/27gs75q/feature-cards/ultragear-27gs75q-06-3-gamer-centric-design-m.jpg",
@@ -77,14 +75,9 @@ const ProductSlider = () => {
     },
   ];
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-    alert(`${product.name} added to cart!`);
-  };
-
   return (
     <div>
-      <h1 className="tit">News</h1>
+      <h1 className="tit">The Best Sellers</h1>
       <div className="wrapper">
         {computerEquipment.map((e, index) => (
           <div className="card" key={index}>
@@ -103,4 +96,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;
+export default ProductsPage;

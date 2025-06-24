@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Best.scss";
 
-const Best = () => {
-  const [cart, setCart] = useState([]);
-
+const Best = ({ addToCart }) => {
   const computerEquipment = [
     {
       img: "https://www.lg.com/content/dam/channel/wcms/kz/sac-id-it-rac/it-mnt-monitors/27gs75q/feature-cards/ultragear-27gs75q-06-3-gamer-centric-design-m.jpg",
@@ -76,11 +74,6 @@ const Best = () => {
       rating: 4.4,
     },
   ];
-
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-    alert(`${product.name} added to cart!`);
-  };
 
   return (
     <div>
