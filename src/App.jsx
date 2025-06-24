@@ -9,9 +9,11 @@ import Compare from "./pages/Compare/Compare";
 import Favorites from "./pages/Favorites/Favorites";
 import Cart from './pages/Cart/Cart'
 import Contact from './pages/Contact/Contact'
+import CategoryProducts from "./pages/CategoryProducts/CategoryProducts";
 
 
 const App = () => {
+
   return (
     <Router>
       <Header />
@@ -23,6 +25,7 @@ const App = () => {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/category/:categoryName" element={<CategoryProducts />} />
         
       </Routes>
       <Footer />

@@ -1,5 +1,6 @@
 import React from "react";
-import './Category.scss'
+import "./Category.scss";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   const categories = [
@@ -30,30 +31,32 @@ const Category = () => {
     },
     {
       id: 6,
-      name: "Brackets", // monitor brackets / arms
-      img: "https://m.media-amazon.com/images/I/61yCHzf2mYL.jpg",
+      name: "WI-FI",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk2yVnxDE7izDVqC-FjbklLt7aHGxSitxAiQ&s",
     },
     {
       id: 7,
-      name: "Speakers", // speakers
-      img: "https://www.jbl.com.sg/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf8ff7d4a/pdp/JBL_Quantum_Duo_Lifestyle_03_904x560px.png",
+      name: "Webcams",
+      img: "https://www.kaplen.com.sg/cdn/shop/products/LogitechC922-1_900x.png?v=1647955714",
     },
     {
       id: 8,
-      name: "Mousepads", // mousepads
+      name: "Mousepads",
       img: "https://i.ytimg.com/vi/jJA6u_YTrB0/maxresdefault.jpg",
     },
   ];
 
   return (
     <div>
-        <h1 className="c">Categories</h1>
+      <h1 className="c">Categories</h1>
       <div className="container-categories">
         {categories.map((category) => (
-          <div className="category-card">
-            <img src={category.img} alt="category"/>
-            <p className="category-title">{category.name}</p>
-          </div>
+          <Link to={`/category/${category.name}`} key={category.id}>
+            <div className="category-card">
+              <img src={category.img} alt="category" />
+              <p className="category-title">{category.name}</p>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
