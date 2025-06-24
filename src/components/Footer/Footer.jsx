@@ -12,23 +12,6 @@ const Footer = () => {
           <p>Delivering quality and trust since 2009.</p>
         </div>
 
-        <div className="footer-section links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Products</a>
-            </li>
-            <li>
-              <a href="#">Help</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
 
         <div className="footer-section social">
           <h4>Follow Us</h4>
