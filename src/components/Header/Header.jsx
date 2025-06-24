@@ -49,14 +49,16 @@ const Header = () => {
           UZS/USD
         </a>
         <a href="#">
-          <Link to='/compare'>
+          <Link to="/compare">
             <AlignVerticalCenterIcon />
             Compare
           </Link>
         </a>
         <a href="#">
-          <FavoriteIcon />
-          Favorite
+          <Link to="/favorites">
+            <FavoriteIcon />
+            Favorite
+          </Link>
         </a>
         <a href="#">
           <ShoppingCartIcon />
